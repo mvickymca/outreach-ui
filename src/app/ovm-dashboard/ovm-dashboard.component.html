@@ -1,0 +1,16 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav opened mode="side">
+    <mat-list>
+      <!-- (click)="selected(this)" -->
+      <mat-list-item><button id="dashboard" [routerLink]="[{ outlets: { menu : ['dashboardMenu']} }]"
+          mat-button>Dashboard</button></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item><button id="admin" [routerLink]="[{ outlets: { menu : ['admin']} }]"
+        mat-button>Admin</button></mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav opened mode="side" position="end"><app-report></app-report></mat-sidenav>
+ 
+  <router-outlet name='menu'></router-outlet>
+</mat-sidenav-container>

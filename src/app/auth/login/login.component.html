@@ -1,0 +1,20 @@
+<form class="loginForm"  (ngSubmit)="loginUser(user.emailId,user.password)" [style.fontSize.px]="20" [formGroup]="loginForm">
+  <div class="loginBlock">
+      <div class="mt-2">
+          <h3>Login User</h3>
+      </div>
+      <div class="credInp">
+        <mat-form-field class="loginInput">
+              <input matInput  placeholder="User Id" [(ngModel)]="user.emailId" name="emailId" id="lEmailId"  formControlName="emailId">
+        </mat-form-field>  
+         
+            <mat-form-field class="loginInput">    
+              <input matInput placeholder="Password" [(ngModel)]="user.password" name="password" id="lPassword" type="password" formControlName="password" >
+        </mat-form-field>
+      </div>
+      <div class="mt-4">
+          <button class="loginUser" id="loginUser" mat-raised-button color="primary" type="submit">Login</button>
+          <button class="registerButton" id="registerButton" mat-raised-button  color="primary" [routerLink]="['/register']">Register</button>
+      </div>
+  </div>
+</form>
